@@ -1,7 +1,8 @@
-
 package futbolistaprevisivo;
 
 import com.sun.scenario.effect.impl.Renderer;
+import futbolistaprevisivo.core.Ingress;
+import futbolistaprevisivo.core.TransactionManager;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,53 +17,46 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class MenuInicioController implements Initializable {
- 
-       @FXML
-        private Button btnIngreso;
-       
-       @FXML
-        private Button btnEgreso;
-       
-      @FXML
-        private void clicButtonIngreso(ActionEvent event) throws IOException {
-        System.out.println("Hizo clic en el botón");
-    
+
+    @FXML
+    private Button btnIngreso;
+
+    @FXML
+    private Button btnEgreso;
+
+    @FXML
+    private void clicButtonIngreso(ActionEvent event) throws IOException {
+        System.out.println("Hizo clic en el botón 111");
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ClasificacionIngresos.fxml"));
         Parent root = loader.load();
-    
+
         Scene pantallaIngreso = new Scene(root);
-    
-         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-    
-         stage.setScene(pantallaIngreso);
-         stage.show();
-}
 
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 
-           @Override
-         public void initialize(URL url, ResourceBundle rb) {
+        stage.setScene(pantallaIngreso);
+        stage.show();
+    }
 
-    }    
-         
-        @FXML
-        private void clicButtonEgreso(ActionEvent event) throws IOException {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        
+    }
+
+    @FXML
+    private void clicButtonEgreso(ActionEvent event) throws IOException {
         System.out.println("Hizo clic en el botón");
-    
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ClasificacionGastos.fxml"));
         Parent root = loader.load();
-    
-        Scene pantallaClasificaGastos = new Scene(root);
-    
-         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-    
-         stage.setScene(pantallaClasificaGastos);
-         stage.show();
-}
-        
-        
-    
-} 
-       
 
+        Scene pantallaClasificaGastos = new Scene(root);
+
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+        stage.setScene(pantallaClasificaGastos);
+        stage.show();
+    }
+
+}
