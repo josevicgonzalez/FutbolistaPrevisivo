@@ -6,21 +6,21 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="futbolistaprevisivo.IngresosPublicidadController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futbolistaprevisivo.IngresosPublicidadController">
    <children>
-      <Label layoutX="228.0" layoutY="59.0" text="Ingresos por Publicidad" />
+      <Label layoutX="237.0" layoutY="64.0" text="Nueva Publicidad" />
       <Label layoutX="168.0" layoutY="113.0" text="Fecha" />
-      <Label layoutX="146.0" layoutY="146.0" text="Descripcion" />
-      <Label layoutX="154.0" layoutY="192.0" text="Valor Anual" />
-      <Label layoutX="161.0" layoutY="232.0" text="Cantidad" />
-      <Label layoutX="184.0" layoutY="272.0" text="Monto" />
-      <DatePicker fx:id="fechaIngresoPubli" layoutX="232.0" layoutY="109.0" prefHeight="25.0" prefWidth="119.0" />
-      <TextField layoutX="232.0" layoutY="142.0" prefHeight="25.0" prefWidth="295.0" />
-      <TextField layoutX="232.0" layoutY="188.0" prefHeight="25.0" prefWidth="166.0" />
-      <TextField layoutX="232.0" layoutY="228.0" prefHeight="25.0" prefWidth="127.0" />
-      <TextField layoutX="237.0" layoutY="268.0" prefHeight="25.0" prefWidth="127.0" />
-      <Button layoutX="168.0" layoutY="328.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
-      <Button fx:id="btnVolverMenuIng" layoutX="366.0" layoutY="328.0" mnemonicParsing="false" onAction="#clicButtonVolverIng" prefHeight="25.0" prefWidth="65.0" text="Volver" />
+      <Label layoutX="169.0" layoutY="233.0" text="Descripcion" />
+      <Label layoutX="154.0" layoutY="192.0" text="Valor por año" />
+      <Label layoutX="131.0" layoutY="150.0" text="Cantidad de años" />
+      <Label layoutX="179.0" layoutY="273.0" text="Subtotal" />
+      <DatePicker fx:id="fechaIngresoPubli" layoutX="244.0" layoutY="109.0" prefHeight="26.0" prefWidth="127.0" />
+      <TextField layoutX="244.0" layoutY="228.0" prefHeight="25.0" prefWidth="295.0" />
+      <TextField layoutX="244.0" layoutY="187.0" prefHeight="25.0" prefWidth="166.0" />
+      <TextField layoutX="244.0" layoutY="146.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField layoutX="244.0" layoutY="269.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button layoutX="191.0" layoutY="341.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Guardar" />
+      <Button fx:id="btnVolverMenuIng" layoutX="308.0" layoutY="341.0" mnemonicParsing="false" onAction="#clicButtonVolverIng" prefHeight="26.0" prefWidth="82.0" text="Cancelar" />
+      <Button layoutX="390.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Calcular" />
    </children>
 </AnchorPane>
