@@ -34,7 +34,10 @@ public class ClasificacionIngresosController implements Initializable {
       private Button btnAhorros;
       
       @FXML
-      private Button btnPremios;
+      private Button btnInversion;
+      
+      @FXML
+      private Button btnIngresosBoni;
       
       @FXML
       private Button btnIngresosPubli;
@@ -86,16 +89,16 @@ public class ClasificacionIngresosController implements Initializable {
         }
         
         @FXML
-        private void clicButtonPremios(ActionEvent event) throws IOException {
+        private void clicButtonInversion(ActionEvent event) throws IOException {
             
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("IngresosPremiosBonos.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("IngresosInversion.fxml"));
         Parent root = loader.load();
     
-        Scene PantallaIngresosPremios = new Scene(root);
+        Scene PantallaIngresosInversion = new Scene(root);
     
          Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
     
-         stage.setScene(PantallaIngresosPremios);
+         stage.setScene(PantallaIngresosInversion);
          stage.show();
         
         }
@@ -112,6 +115,21 @@ public class ClasificacionIngresosController implements Initializable {
          Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
     
          stage.setScene(PantallaIngresosPublicidad);
+         stage.show();
+        
+        }
+        
+        @FXML
+        private void clicButtonIngBoni(ActionEvent event) throws IOException {
+            
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("IngresosBonificacion.fxml"));
+        Parent root = loader.load();
+    
+        Scene PantallaIngresosBonificacion = new Scene(root);
+    
+         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+    
+         stage.setScene(PantallaIngresosBonificacion);
          stage.show();
         
         }

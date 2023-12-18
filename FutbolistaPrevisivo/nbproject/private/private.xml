@@ -5,21 +5,29 @@
         <group>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/Principal.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/primaryStage.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosPremiosBonosController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/ClasificacionIngresosController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosImpuestosController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosBonificacionController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosMultasController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosLesionesController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/Transaccion.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosPublicidadController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/ReporteEgresosController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosAhorrosInversionesController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/TransaccionAhorros.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/root.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/TotalesController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/ClasificacionIngresosController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosImpuestosController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/core/Egress.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/core/Ingress.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosLesionesController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/Transaccion.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/stage.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosInversionController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/EstadosdeCuentaController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosPublicidadController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/GastosFilantropiaController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosPorContratoController.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/ReporteIngresosController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/ClasificacionGastosController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/IngresosContratosController.java</file>
             <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/MenuInicioController.java</file>
-            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/root.java</file>
+            <file>file:/Users/josevictorgonzalez/NetBeansProjects/FutbolistaPrevisivo/src/futbolistaprevisivo/core/TransactionManager.java</file>
         </group>
     </open-files>
 </project-private>

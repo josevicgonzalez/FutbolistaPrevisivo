@@ -6,18 +6,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futbolistaprevisivo.GastosLesionesController">
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futbolistaprevisivo.GastosLesionesController">
    <children>
-      <Label layoutX="254.0" layoutY="68.0" text="Lesiones" />
+      <Label layoutX="254.0" layoutY="68.0" text="Nueva Lesion" />
       <Label layoutX="178.0" layoutY="123.0" text="Fecha" />
       <Label layoutX="146.0" layoutY="158.0" text="Descripcion" />
-      <Label layoutX="161.0" layoutY="192.0" text="Porcentaje" />
-      <Label layoutX="177.0" layoutY="232.0" text="Monto" />
-      <DatePicker layoutX="223.0" layoutY="119.0" prefHeight="25.0" prefWidth="151.0" />
-      <TextField layoutX="223.0" layoutY="154.0" prefHeight="25.0" prefWidth="328.0" />
-      <TextField layoutX="223.0" layoutY="188.0" prefHeight="25.0" prefWidth="125.0" />
-      <TextField layoutX="223.0" layoutY="228.0" prefHeight="25.0" prefWidth="125.0" />
-      <Button layoutX="196.0" layoutY="300.0" mnemonicParsing="false" text="Guardar" />
-      <Button fx:id="btnVolverEg" layoutX="303.0" layoutY="300.0" mnemonicParsing="false" onAction="#clicButtonVolver" prefHeight="25.0" prefWidth="59.0" text="Volver" />
+      <Label layoutX="163.0" layoutY="202.0" text="Porcentaje" />
+      <Label layoutX="150.0" layoutY="315.0" text="Nuevo Saldo" />
+      <DatePicker fx:id="fechaLesion" layoutX="223.0" layoutY="119.0" prefHeight="25.0" prefWidth="151.0" />
+      <TextField fx:id="descripcionLesion" layoutX="223.0" layoutY="154.0" prefHeight="25.0" prefWidth="328.0" />
+      <TextField fx:id="porcentajeLesion" layoutX="225.0" layoutY="197.0" prefHeight="25.0" prefWidth="125.0" />
+      <TextField fx:id="saldoAcumulado" editable="false" layoutX="229.0" layoutY="239.0" prefHeight="25.0" prefWidth="125.0" />
+      <TextField fx:id="totalLesion" editable="false" layoutX="228.0" layoutY="272.0" />
+      <TextField fx:id="saldoActual" editable="false" layoutX="229.0" layoutY="310.0" prefHeight="25.0" prefWidth="125.0" />
+      <Button fx:id="btnCalcularLesion" layoutX="370.0" layoutY="310.0" mnemonicParsing="false" onAction="#clicButtonCalcLesion" prefHeight="26.0" prefWidth="72.0" text="Calcular" />
+      <Button fx:id="btnGuardarLesion" layoutX="198.0" layoutY="368.0" mnemonicParsing="false" onAction="#clicButtonGuardarLesion" prefHeight="26.0" prefWidth="72.0" text="Guardar" />
+      <Button fx:id="btnVolverEg" layoutX="305.0" layoutY="368.0" mnemonicParsing="false" onAction="#clicButtonVolver" prefHeight="26.0" prefWidth="79.0" text="Cancelar" />
+      <Label layoutX="154.0" layoutY="244.0" text="Saldo Total" />
+      <Label layoutX="121.0" layoutY="276.0" text="Costo Total Lesion" />
    </children>
 </AnchorPane>

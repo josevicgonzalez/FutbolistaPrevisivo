@@ -19,6 +19,8 @@ import java.util.Date;
 import java.time.LocalDate;
 import java.time.ZoneId; 
 import futbolistaprevisivo.Transaccion;
+import futbolistaprevisivo.core.Ingress;
+import futbolistaprevisivo.core.TransactionManager;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 
@@ -33,6 +35,9 @@ public class IngresosAhorrosInversionesController implements Initializable {
     
     @FXML 
     private TextField descripIngreso;
+    
+    @FXML 
+    private TextField saldo_Actual;
     
     @FXML
     private TextField porAhorro;
@@ -51,31 +56,24 @@ public class IngresosAhorrosInversionesController implements Initializable {
             LocalDate fechaAhorro = fechaIngreso.getValue();
             Date fecha = Date.from(fechaAhorro.atStartOfDay(ZoneId.systemDefault()).toInstant());
             
-            String descripcionAhorro = descripIngreso.getText();
-        //  double monto = Double.parseDouble(montoIngreso.getText());
-           
-            Transaccion nuevoIngreso = Transaccion.getInstancia();
-            double totalAhorro = nuevoIngreso.getMonto();
-        //    System.out.println(nuevoIngreso.getMonto());
-        //    System.out.println(totalAhorro);
-        //     System.out.println(nuevoIngreso.getDescripcion());
+            Double porcentajeAhorro = Double.parseDouble(porAhorro.getText());
             
-            double porcentaje = Double.parseDouble(porAhorro.getText());
+            double saldoActual = TransactionManager.getSaldo();
             
-            double montoAhorro = (totalAhorro * (porcentaje /100)); 
+            String descripcion = descripIngreso.getText();
+            double ingresosGanados = (saldoActual * (porcentajeAhorro / 100)) + saldoActual;
+            double saldoActualizado = ingresosGanados;
             
-            montoAhorroT.setText(String.valueOf(montoAhorro));
-         
-            System.out.println(montoAhorro);
-           
-            Transaccion.getInstancia().setMonto(totalAhorro - montoAhorro); 
-            System.out.println("Su nuevo saldo es " + nuevoIngreso.getMonto());
+            saldo_Actual.setText(String.valueOf(TransactionManager.getSaldo()));
             
-            TransaccionAhorros nuevoAhorro = new TransaccionAhorros(descripcionAhorro,montoAhorro,fechaAhorro,porcentaje);  
+            montoAhorroT.setText(String.valueOf(ingresosGanados));
             
-            System.out.println("Nueva Transacción " +  nuevoAhorro.getDescripcionAhorro() + "  "+  nuevoAhorro.getMontoAhorro() + ", " + nuevoAhorro.getFechaAhorro() +  " " + nuevoAhorro.getPorcentaje());
+            Ingress newIngress = new Ingress();
+            newIngress.setFecha(fecha);
+            newIngress.setDescripcion(descripcion);
+            newIngress.setSubtotal(saldoActualizado); 
+            TransactionManager.addIngress(newIngress);
             
-            nuevoSaldo.setText("Su saldo disponible es " + nuevoIngreso.getMonto() );
             
             
         } 
@@ -83,15 +81,15 @@ public class IngresosAhorrosInversionesController implements Initializable {
     @FXML
         private void clicButtonVolverM(ActionEvent event) throws IOException {
             
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuInicio.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ClasificacionIngresos.fxml"));
         Parent root = loader.load();
-    
-        Scene pantallaMenuInicio = new Scene(root);
-    
-         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-    
-         stage.setScene(pantallaMenuInicio);
-         stage.show();
+
+        Scene pantallaIngreso = new Scene(root);
+
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+        stage.setScene(pantallaIngreso);
+        stage.show();
         }
     
 

@@ -22,27 +22,24 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 public class IngresosContratosController implements Initializable {
+    
+
 
     @FXML
     private DatePicker fechaIngreso;
 
     @FXML
-    private ComboBox tipoIngreso;
-
-    @FXML
     private TextField descripIngreso;
 
     @FXML
-    private TextField montoIngreso;
+    private TextField subTotal;
 
     private int valorMontoIngreso;
     LocalDate fechaDeIngreso;
 
     private String descripcionDeIngreso;
 
-    @FXML
-    private ComboBox<String> comboTipoIngreso;
-
+   
     @FXML
     private ComboBox<String> comboTipoContrato;
 
@@ -59,7 +56,8 @@ public class IngresosContratosController implements Initializable {
 
     @FXML
     private Label prueba;
-
+    
+  
     @FXML
     private void comboboxEvent(ActionEvent event) {
 
@@ -67,22 +65,40 @@ public class IngresosContratosController implements Initializable {
 
     @FXML
     private Button btnVolverIng;
+    
+     @FXML
+    private Button btnCalcular;
+     
+    @FXML
+    private void clicButtonCalcular(ActionEvent event){
+    
+        int noYears = Integer.parseInt(noYearsText.getText());
+        int valorYear = Integer.parseInt(valorYearText.getText());
+
+        double monto = noYears * valorYear;
+        subTotal.setText(Double.toString(monto));
+    
+    
+    }
 
     // ComboBox<String> tipoIngresoCombo = new ComboBox<>();
     @FXML
     private void clicButtonGuardarIn(ActionEvent event) {
         LocalDate fechaTrans = fechaIngreso.getValue();
         Date fecha = Date.from(fechaTrans.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        String descripcion = descripIngreso.getText();
+        
         //  double monto = Double.parseDouble(montoIngreso.getText());
-        String equipoIngresos = comboTipoIngreso.getValue();
+        //String equipoIngresos = comboTipoIngreso.getValue();
         String tipoContrato = comboTipoContrato.getValue();
+        String descripcion = descripIngreso.getText();
+      
+        
 
         int noYears = Integer.parseInt(noYearsText.getText());
         int valorYear = Integer.parseInt(valorYearText.getText());
 
         double monto = noYears * valorYear;
-
+        
         Ingress newIngress = new Ingress();
         newIngress.setFecha(fecha);
         newIngress.setDescripcion(descripcion);
@@ -90,9 +106,15 @@ public class IngresosContratosController implements Initializable {
         newIngress.setValorPorAnio(valorYear);
         newIngress.setTipoContrato(tipoContrato);
         newIngress.setSubtotal(monto);
+        newIngress.setIdContrato(true); 
         TransactionManager.addIngress(newIngress);
-
-        montoIngreso.setText(String.valueOf(TransactionManager.getSaldo()));
+        
+        subTotal.setText(String.valueOf(TransactionManager.getSaldo()));
+        
+        Double a = TransactionManager.getSaldo();
+        System.out.println(a);
+        
+        
 //      montoIngreso.setText(String.valueOf(monto));
 
 //      Transaccion nuevoIngreso = new Transaccion(descripcion, monto, fechaTrans, equipoIngresos, tiempoContrato, noYears, valorYear);  
@@ -102,14 +124,14 @@ public class IngresosContratosController implements Initializable {
     @FXML
     private void clicButtonVolverIn(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuInicio.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ClasificacionIngresos.fxml"));
         Parent root = loader.load();
 
-        Scene pantallaMenuInicio = new Scene(root);
+        Scene pantallaIngreso = new Scene(root);
 
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
 
-        stage.setScene(pantallaMenuInicio);
+        stage.setScene(pantallaIngreso);
         stage.show();
 
     }
@@ -120,10 +142,10 @@ public class IngresosContratosController implements Initializable {
        Collections.addAll(listaTipoIngresos, "uno", "dos");
        comboTipoIgreso.getItems().addAll(listaTipoIngresos);*/
 
-        comboTipoIngreso.getItems().addAll("Equipo Estrella");
+        /*comboTipoIngreso.getItems().addAll("Equipo Estrella");
         comboTipoIngreso.getItems().addAll("Equipo Galaxia");
         comboTipoIngreso.getItems().addAll("Equipo Cometa");
-        comboTipoIngreso.getItems().addAll("Seleccion Nacional");
+        comboTipoIngreso.getItems().addAll("Seleccion Nacional");*/
 
         comboTipoContrato.getItems().addAll("Contrato Anual");
         comboTipoContrato.getItems().addAll("Contrato MultiAnual");

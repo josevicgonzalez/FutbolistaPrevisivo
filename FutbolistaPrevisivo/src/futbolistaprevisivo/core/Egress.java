@@ -56,4 +56,22 @@ public class Egress {
     public void setContrato(String contrato) {
         this.contrato = contrato;
     }
+    
+       @Override
+    public String toString() {
+        return "Egreso{" +
+                "fecha=" + fecha +
+                ", descripcion='" + descripcion + '\'' +
+                ", subtotal=" + subtotal +
+                ", contrato='" + contrato + '\'' +
+                ", porcentaje=" + porcentaje +
+                '}';
+    }
+    
+    
+    
+    
+    
+    
+    
 }

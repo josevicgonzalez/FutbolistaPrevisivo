@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package futbolistaprevisivo.core;
 
 import java.util.Date;
@@ -15,11 +12,22 @@ public class Ingress {
     private String descripcion;
     private double subtotal;
     private String contrato;
+    private boolean idContrato = false;
     private double porcentaje;
     private double montoAInvertir;
 
     public Ingress(){
         
+    }
+    
+    public boolean isIdContrato() {
+        return idContrato;
+    }
+    
+    public void setIdContrato(boolean idContrato) {
+    
+        this.idContrato = idContrato;
+    
     }
 
     public Date getFecha() {
@@ -93,4 +101,25 @@ public class Ingress {
     public void setMontoAInvertir(double montoAInvertir) {
         this.montoAInvertir = montoAInvertir;
     }
+    
+      @Override
+    public String toString() {
+        return "Ingreso{" +
+                "fecha=" + fecha +
+                ", tipoContrato='" + tipoContrato + '\'' +
+                ", cantidadAnios=" + cantidadAnios +
+                ", valorPorAnio=" + valorPorAnio +
+                ", descripcion='" + descripcion + '\'' +
+                ", subtotal=" + subtotal +
+                ", contrato='" + contrato + '\'' +
+                ", porcentaje=" + porcentaje +
+                ", montoAInvertir=" + montoAInvertir +
+                '}';
+    }
+    
+    
+    
+    
+    
+    
 }

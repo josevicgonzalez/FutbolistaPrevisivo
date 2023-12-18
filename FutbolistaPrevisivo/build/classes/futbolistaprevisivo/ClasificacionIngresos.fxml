@@ -9,9 +9,9 @@
       <Label layoutX="261.0" layoutY="83.0" text="Ingresos" />
       <Button fx:id="btnContratos" layoutX="221.0" layoutY="123.0" mnemonicParsing="false" onAction="#clicButtonIngContrato" prefHeight="26.0" prefWidth="126.0" text="Contratos" />
       <Button fx:id="btnAhorros" layoutX="221.0" layoutY="167.0" mnemonicParsing="false" onAction="#clicButtonIngAhorro" prefHeight="26.0" prefWidth="126.0" text="Ahorros" />
-      <Button fx:id="btnPremios" layoutX="221.0" layoutY="213.0" mnemonicParsing="false" onAction="#clicButtonPremios" prefHeight="26.0" prefWidth="126.0" text="Inversones" />
+      <Button fx:id="btnInversion" layoutX="221.0" layoutY="213.0" mnemonicParsing="false" onAction="#clicButtonInversion" prefHeight="26.0" prefWidth="126.0" text="Inversones" />
       <Button fx:id="volverMenuI" layoutX="52.0" layoutY="27.0" mnemonicParsing="false" onAction="#clicButtonVolverMenu" text="Regresar" />
       <Button fx:id="btnIngresosPubli" layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#clicButtonIngPubli" prefHeight="26.0" prefWidth="126.0" text="Publicidad" />
-      <Button fx:id="btnIngresosPubli1" layoutX="221.0" layoutY="305.0" mnemonicParsing="false" onAction="#clicButtonIngPubli" prefHeight="26.0" prefWidth="126.0" text="Bonificacion" />
+      <Button fx:id="btnIngresosBoni" layoutX="221.0" layoutY="305.0" mnemonicParsing="false" onAction="#clicButtonIngBoni" prefHeight="26.0" prefWidth="126.0" text="Bonificacion" />
    </children>
 </AnchorPane>

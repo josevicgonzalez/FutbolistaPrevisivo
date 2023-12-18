@@ -6,18 +6,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futbolistaprevisivo.GastosFilantropiaController">
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futbolistaprevisivo.GastosFilantropiaController">
    <children>
-      <Label layoutX="258.0" layoutY="65.0" text="Filantropia" />
+      <Label layoutX="213.0" layoutY="76.0" text="Nueva Donacion (Filantropia)" />
       <Label layoutX="167.0" layoutY="132.0" text="Fecha" />
       <Label layoutX="142.0" layoutY="167.0" text="Descripcion" />
-      <Label layoutX="145.0" layoutY="200.0" text="Porcentaje" />
-      <Label layoutX="166.0" layoutY="233.0" text="Monto" />
-      <DatePicker layoutX="221.0" layoutY="128.0" prefHeight="25.0" prefWidth="170.0" />
-      <TextField layoutX="220.0" layoutY="163.0" prefHeight="25.0" prefWidth="331.0" />
-      <TextField layoutX="220.0" layoutY="196.0" prefHeight="25.0" prefWidth="129.0" />
-      <TextField layoutX="220.0" layoutY="229.0" prefHeight="25.0" prefWidth="129.0" />
-      <Button layoutX="157.0" layoutY="290.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Guardar" />
-      <Button fx:id="btnVolverE" layoutX="300.0" layoutY="290.0" mnemonicParsing="false" onAction="#clicButtonVolver" prefHeight="25.0" prefWidth="65.0" text="Volver" />
+      <Label layoutX="143.0" layoutY="204.0" text="Porcentaje" />
+      <Label layoutX="143.0" layoutY="324.0" text="Nuevo Saldo" />
+      <DatePicker fx:id="fechaFilantropia" layoutX="215.0" layoutY="128.0" prefHeight="25.0" prefWidth="170.0" />
+      <TextField fx:id="descripcionFilantropia" layoutX="217.0" layoutY="163.0" prefHeight="25.0" prefWidth="331.0" />
+      <TextField fx:id="porcentajeFilantropia" layoutX="218.0" layoutY="200.0" prefHeight="25.0" prefWidth="129.0" promptText="Ingrese porcentaje" />
+      <TextField fx:id="saldoActual" editable="false" layoutX="222.0" layoutY="243.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="totalADonar" layoutX="220.0" layoutY="282.0" />
+      <TextField fx:id="nuevoSaldo" layoutX="222.0" layoutY="320.0" prefHeight="25.0" prefWidth="129.0" />
+      <Button fx:id="btnCalcularFilantropia" layoutX="385.0" layoutY="320.0" mnemonicParsing="false" onAction="#clicButtonCalcularF" prefHeight="26.0" prefWidth="77.0" text="Calcular" />
+      <Button fx:id="btnGuardarFilantropia" layoutX="157.0" layoutY="380.0" mnemonicParsing="false" onAction="#clicButtonGuardarF" prefHeight="26.0" prefWidth="77.0" text="Guardar" />
+      <Button fx:id="btnVolverE" layoutX="300.0" layoutY="380.0" mnemonicParsing="false" onAction="#clicButtonVolver" prefHeight="26.0" prefWidth="77.0" text="Cancelar" />
+      <Label layoutX="145.0" layoutY="247.0" text="Saldo Total" />
+      <Label layoutX="139.0" layoutY="286.0" text="Total a Donar" />
    </children>
 </AnchorPane>
